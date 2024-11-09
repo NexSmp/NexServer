@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaming Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="https://discord.gg/FetsVPcQ" class="nav-button">Discord</a>
+        <a href="payment.html" class="nav-button">Payment</a>
+    </div>
+
+    <div class="content">
+        <h2>Categories</h2>
+        
+        <!-- Category Grid -->
+        <div class="category-grid">
+            <div class="category" onclick="showCategory('games')">
+                <h3>Games</h3>
+            </div>
+            <div class="category" onclick="showCategory('currency')">
+                <h3>Game Currency</h3>
+            </div>
+        </div>
+
+        <h2>Products</h2>
+        
+        <!-- Product Grid -->
+        <div class="product-grid" id="product-grid">
+            <!-- Games Category -->
+            <div class="product games">
+                <img src="gta5.png" alt="GTA 5" class="product-image">
+                <p><strong>GTA 5</strong> - ₹500 (Lifetime access)</p>
+                <a href="payment.html" class="buy-button">Buy Now</a>
+            </div>
+
+            <div class="product games">
+                <img src="car.png" alt="Car for Sell" class="product-image">
+                <p><strong>Car for Sell</strong> - ₹700 (In-Game Asset)</p>
+                <a href="payment.html" class="buy-button">Buy Now</a>
+            </div>
+
+            <div class="product games">
+                <img src="discord-nitro.png" alt="Discord Nitro Basic" class="product-image">
+                <p><strong>Discord Nitro Basic</strong> - ₹100 (Added to your account)</p>
+                <a href="payment.html" class="buy-button">Buy Now</a>
+            </div>
+
+            <div class="product games">
+                <img src="discord-nitro-premium.png" alt="Discord Nitro Premium" class="product-image">
+                <p><strong>Discord Nitro Premium</strong> - ₹300 (Added to your account)</p>
+                <a href="payment.html" class="buy-button">Buy Now</a>
+            </div>
+
+            <div class="product games">
+                <img src="minecraft-account.png" alt="Minecraft Account" class="product-image">
+                <p><strong>Minecraft Account (Lifetime)</strong> - ₹200</p>
+                <a href="payment.html" class="buy-button">Buy Now</a>
+            </div>
+
+            <!-- Game Currency Category -->
+            <div class="product currency">
+                <img src="freefire-diamonds.png" alt="Free Fire Diamonds" class="product-image">
+                <p><strong>₹50</strong> - 100 Free Fire Diamonds</p>
+                <a href="payment.html" class="buy-button">Buy Now</a>
+            </div>
+
+            <div class="product currency">
+                <img src="freefire-diamonds.png" alt="Free Fire Diamonds" class="product-image">
+                <p><strong>₹70</strong> - 200 Free Fire Diamonds</p>
+                <a href="payment.html" class="buy-button">Buy Now</a>
+            </div>
+
+            <div class="product currency">
+                <img src="freefire-diamonds.png" alt="Free Fire Diamonds" class="product-image">
+                <p><strong>₹100</strong> - 300 Free Fire Diamonds</p>
+                <a href="payment.html" class="buy-button">Buy Now</a>
+            </div>
+
+            <div class="product currency">
+                <img src="freefire-diamonds.png" alt="Free Fire Diamonds" class="product-image">
+                <p><strong>₹120</strong> - 400 Free Fire Diamonds</p>
+                <a href="payment.html" class="buy-button">Buy Now</a>
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function showCategory(category) {
+            const allProducts = document.querySelectorAll('.product');
+            allProducts.forEach(product => {
+                product.style.display = 'none';
+            });
+            const selectedProducts = document.querySelectorAll(`.${category}`);
+            selectedProducts.forEach(product => {
+                product.style.display = 'block';
+            });
+        }
+    </script>
+
+</body>
+</html>
